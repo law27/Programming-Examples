@@ -6,5 +6,13 @@ obj1["age"] = 20;
 obj2.name = "karthick";
 obj2["age"] = 19;
 
-console.log(obj1);
-console.log(obj2);
+let user = {
+    name : "Lawrance",
+    age: 20,
+    id: "igfuh4hj"
+};
+
+for(let key in user) {
+    alert(key);
+    alert(user[key]);
+}
