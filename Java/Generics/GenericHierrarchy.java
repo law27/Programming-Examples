@@ -32,7 +32,8 @@ class Temp<T,V> extends GenericTrial<T> {
 
 public class GenericHierrarchy {
     public static void main (String[] args) {
-        Temp<String, Integer> t = new Temp<String, Integer>("This", 25);
+        GenericTrial<String> t = new Temp<String, Integer>("This", 25);
+        // Temp<String, Integer> t = new Temp<String, Integer>("This", 25);
         t.print(); 
     }
 }
