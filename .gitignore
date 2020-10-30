@@ -2,3 +2,7 @@
 *.txt
 *.out
 *.exe
+node_modules/
+node_modules/*
+.env
+yarn.lock
