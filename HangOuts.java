@@ -84,6 +84,7 @@ public class HangOuts {
           Admin internetProgramming = Admin.createMeeting("lawrance.1802052@srit.org", "*********");
           Participant p1 = Participant.joinMeeting("karthick.1802046@srit.org", "*******", internetProgramming.getMeetingID());
           Participant p2 = Participant.joinMeeting("kailas.1802040@srit.org", "*********", internetProgramming.getMeetingID());
+          Participant p3 = Participant.joinMeeting("jeyalawrance@gmail.com", "****", internetProgramming.getMeetingID());
           
           internetProgramming.toggleMicroPhone();
           internetProgramming.toggleCamera();
