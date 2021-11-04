@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Github Search Application</title>
+</head>
+<body>
+    <h1 id="heading">Github Search Application</h1>
+    <hr>
+    <div id="search-section">
+        <form>
+            <input class="font" type="text" name="search" id="search" placeholder="Type to Search 🔎" v-model="searchValue">
+            <button class="font" type="submit" name="search" id="search-button" @click.prevent="searchRepos"> Search 🔥</button>
+        </form>
+        <div id="result">
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No </th>
+                        <th>Repo </th>
+                        <th>Repo Link</th>
+                        <th>Stars 🌟</th>
+                        <th>Forks 🍴</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr v-for="(item, index) in items">
+                        <td> {{ index }} </td>
+                        <td> {{ item.full_name }} </td>
+                        <td><a v-bind:href="item.html_url" target="_blank" >{{ item.html_url }}</a></td>
+                        <td> {{ item.stargazers_count }} </td>
+                        <td> {{ item.forks_count }} </td>
+                    </tr>
+<!--                    <repo v-for="(item, index) in items" v-bind:key="item.id"
+                          v-bind:index="index"
+                          v-bind:repo="item.full_name"
+                          v-bind:repo-link="item.html_url"
+                          v-bind:stars="item.stargazers_count"
+                          v-bind:forks="item.forks_count">
+                    </repo>-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+    <script src="app.js"></script>
+</html>
